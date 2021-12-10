@@ -10,7 +10,7 @@ add_executable(shadergen
   src/shadergen.cc
 )
 
-set(SDL2DIR ${CMAKE_CURRENT_SOURCE_DIR}/third_party/SDL2-2.0.8)
+set(SDL2DIR ${CMAKE_CURRENT_SOURCE_DIR}/third_party/SDL2-2.0.18)
 
 FILE (GLOB ShaderSources src/*.glsl third_party/*.glsl)
 
@@ -59,6 +59,7 @@ if(UNIX)
     -fno-strict-aliasing
     -fno-omit-frame-pointer
     -Wno-extern-c-compat
+    -fcommon
     #-Werror
     )
   if (APPLE)

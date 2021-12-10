@@ -225,6 +225,10 @@ u64 perf_counter();
 float perf_count_to_sec(u64 counter);
 
 
+#if defined(__cplusplus)
+}
+#endif
+
 #if defined(_WIN32)
 #include "platform_windows.h"
 #elif defined(__linux__) || defined(__MACH__)
@@ -232,6 +236,3 @@ float perf_count_to_sec(u64 counter);
 #endif
 
 
-#if defined(__cplusplus)
-}
-#endif
